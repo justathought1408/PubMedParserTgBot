@@ -21,7 +21,7 @@ parsing = True
 
 @dp.message_handler(Command("start"))
 async def start_command(message: Message):
-	await message.answer("Введите запрос с командой /q. Пример:\n\n/q diabetes")
+	await message.answer("Введите запрос с командой /q. Пример:\n\n/q diabetes\n\nЧтобы остановить запросы, введите команду /stop")
 
 
 @dp.message_handler(Command("q"))
@@ -153,6 +153,5 @@ async def parsing_query(message: Message):
 async def stop(message: Message):
 	global parsing
 	parsing = False
-	await message.answer("Запросы остановлены.")
 	await message.answer("Запросы остановлены.")
 	await message.answer("Запросы остановлены.")
